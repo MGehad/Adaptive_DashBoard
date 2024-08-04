@@ -1,4 +1,4 @@
-# adaptive_dash_board
+# adaptive_dashboard
 
 A new Flutter project.
 
