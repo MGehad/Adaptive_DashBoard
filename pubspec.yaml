@@ -34,7 +34,7 @@ dependencies:
   fl_chart: ^0.65.0
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.9
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -72,5 +72,4 @@ flutter:
           weight: 500
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-flutter_assets:
-  assets_path: assets/images
+
