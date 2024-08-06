@@ -49,4 +49,10 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     fontFamily: 'Montserrat',
   );
+  static TextStyle textStyleBold16 = const TextStyle(
+    color: Color(0xff4EB7F2),
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'Montserrat',
+  );
 }
