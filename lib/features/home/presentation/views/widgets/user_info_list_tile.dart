@@ -17,7 +17,7 @@ class UserInfoListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
       color: const Color(0xffFAFAFA),
       elevation: 0,
       child: ListTile(

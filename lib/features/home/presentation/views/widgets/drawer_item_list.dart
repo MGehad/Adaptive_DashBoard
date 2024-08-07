@@ -19,12 +19,13 @@ class _DrawerItemListState extends State<DrawerItemList> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: widget.items.length,
-        padding: const EdgeInsets.all(20),
-        itemBuilder: (context, index) {
-          return GestureDetector(
+    return SliverList.builder(
+      itemCount: widget.items.length,
+
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: GestureDetector(
             onTap: () {
               if (index != selectedItem) {
                 setState(() {
@@ -36,9 +37,9 @@ class _DrawerItemListState extends State<DrawerItemList> {
               model: widget.items[index],
               isActive: index == selectedItem,
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

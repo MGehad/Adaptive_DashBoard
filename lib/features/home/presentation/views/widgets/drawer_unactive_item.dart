@@ -11,7 +11,7 @@ class DrawerUnActiveItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: const EdgeInsets.symmetric(vertical: 10),
+      contentPadding: const EdgeInsets.symmetric(vertical: 8.0),
       leading: SvgPicture.asset(
         model.svgImage,
         width: 24,
