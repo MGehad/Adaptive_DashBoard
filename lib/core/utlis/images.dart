@@ -15,4 +15,5 @@ abstract class Images {
   static const String imagesSettings = 'assets/images/settings.svg';
   static const String imagesStatistics = 'assets/images/statistics.svg';
   static const String imagesWalletAccount = 'assets/images/wallet_account.svg';
+  static const String imagesArrowDown = 'assets/images/arrow-down.svg';
 }
