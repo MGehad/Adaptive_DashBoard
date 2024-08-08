@@ -18,9 +18,9 @@ class DesktopLayout extends StatelessWidget {
             padding: const EdgeInsets.all(30.0),
             child: Column(
               children: [
-                Expanded(flex: 7, child: AllExpenses()),
+                AllExpenses(),
                 const SizedBox(height: 24.0),
-                Expanded(flex: 4, child: Container()),
+                Expanded(child: Container()),
               ],
             ),
           ),
