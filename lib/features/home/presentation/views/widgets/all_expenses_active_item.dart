@@ -53,14 +53,14 @@ class AllExpensesActiveItem extends StatelessWidget {
             style: Styles.textStyleSemiBold16.copyWith(color: Colors.white),
           ),
           Text(
-            "April 2022",
+            model.date,
             style: Styles.textStyleRegular14.copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 14,
           ),
           Text(
-            "\$20,129",
+            model.price,
             style: Styles.textStyleSemiBold24.copyWith(color: Colors.white),
           )
         ],

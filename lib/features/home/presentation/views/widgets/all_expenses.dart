@@ -1,5 +1,5 @@
-import 'package:adaptive_dashboard/constants.dart';
 import 'package:flutter/material.dart';
+import '../../../../../constants.dart';
 import 'all_expenses_header.dart';
 import 'all_expenses_item.dart';
 
@@ -24,9 +24,7 @@ class _AllExpensesState extends State<AllExpenses> {
       child: Column(
         children: [
           const AllExpensesHeader(),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16),
           Row(
               children: allExpensesItemModels.asMap().entries.map(
             (e) {
@@ -34,9 +32,7 @@ class _AllExpensesState extends State<AllExpenses> {
                 return Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      setState(() {
-                        if (selectedItem != e.key) selectedItem = e.key;
-                      });
+                      updateIndex(e.key);
                     },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -51,9 +47,7 @@ class _AllExpensesState extends State<AllExpenses> {
                 return Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      setState(() {
-                        if (selectedItem != e.key) selectedItem = e.key;
-                      });
+                      updateIndex(e.key);
                     },
                     child: AllExpensesItem(
                       model: e.value,
@@ -67,5 +61,11 @@ class _AllExpensesState extends State<AllExpenses> {
         ],
       ),
     );
+  }
+
+  void updateIndex(int i) {
+    setState(() {
+      if (selectedItem != i) selectedItem = i;
+    });
   }
 }

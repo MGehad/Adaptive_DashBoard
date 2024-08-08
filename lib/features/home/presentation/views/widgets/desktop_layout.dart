@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'all_expenses.dart';
 import 'custom_drawer.dart';
 
@@ -18,7 +17,7 @@ class DesktopLayout extends StatelessWidget {
             padding: const EdgeInsets.all(30.0),
             child: Column(
               children: [
-                AllExpenses(),
+                const AllExpenses(),
                 const SizedBox(height: 24.0),
                 Expanded(child: Container()),
               ],

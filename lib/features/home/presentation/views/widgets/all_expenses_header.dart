@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../../../core/utlis/images.dart';
 import '../../../../../core/utlis/styles.dart';
 
