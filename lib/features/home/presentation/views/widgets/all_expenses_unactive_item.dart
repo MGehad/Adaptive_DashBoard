@@ -16,11 +16,11 @@ class AllExpensesUnActiveItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12.0),
-          border: Border.all(
-            color: const Color(0xffF1F1F1),
-          ),
-          ),
+        borderRadius: BorderRadius.circular(12.0),
+        border: Border.all(
+          color: const Color(0xffF1F1F1),
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +28,7 @@ class AllExpensesUnActiveItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CircleAvatar(
-                backgroundColor: const Color(0xffFAFAFA).withOpacity(.2),
+                backgroundColor: Colors.grey.withOpacity(.1),
                 maxRadius: 30,
                 child: SvgPicture.asset(
                   model.svgImage,
@@ -49,24 +49,13 @@ class AllExpensesUnActiveItem extends StatelessWidget {
           ),
           Text(
             model.title,
-            style: Styles.textStyleSemiBold16
-                .copyWith(color: const Color(0xff064061)),
+            style: Styles.textStyleSemiBold16,
           ),
-          Text(
-            "April 2022",
-            style: Styles.textStyleRegular14.copyWith(
-              color: const Color(0xffAAAAAA),
-            ),
-          ),
+          Text("April 2022", style: Styles.textStyleRegular14),
           const SizedBox(
             height: 14,
           ),
-          Text(
-            "\$20,129",
-            style: Styles.textStyleSemiBold24.copyWith(
-              color: const Color(0xff4EB7F2),
-            ),
-          )
+          Text("\$20,129", style: Styles.textStyleSemiBold24)
         ],
       ),
     );
