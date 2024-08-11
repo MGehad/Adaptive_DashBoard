@@ -16,17 +16,17 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(left: 8.0, bottom: 16.0, top: 24.0),
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
-              title: "Lekan Okeowo",
-              subtitle: "demo@gmail.com",
-              svgImage: Images.imagesAvatar3,
+              model: userInfoModels[2],
+              margin:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
             ),
           ),
-          DrawerItemList(items: items),
-          SliverFillRemaining(
+          const DrawerItemList(items: items),
+          const SliverFillRemaining(
             hasScrollBody: false,
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 32, horizontal: 20),

@@ -1,5 +1,6 @@
 import 'core/models/all_expenses_item_model.dart';
 import 'core/models/drawer_item_model.dart';
+import 'core/models/user_info_model.dart';
 import 'core/utlis/images.dart';
 
 const List<DrawerItemModel> items = [
@@ -28,4 +29,18 @@ const List<AllExpensesItemModel> allExpensesItemModels = [
       svgImage: Images.imagesExpenses,
       date: "April 2022",
       price: "\$20,129"),
+];
+List<UserInfoModel> userInfoModels = [
+  UserInfoModel(
+      svgImage: Images.imagesAvatar1,
+      title: "Madrani Andi",
+      subtitle: "Madraniadi20@gmail"),
+  UserInfoModel(
+      svgImage: Images.imagesAvatar2,
+      title: "Josua Nunito",
+      subtitle: "Josh Nunito@gmail.com"),
+  UserInfoModel(
+      svgImage: Images.imagesAvatar3,
+      title: "Madrani Andi",
+      subtitle: "Madraniadi20@gmail"),
 ];

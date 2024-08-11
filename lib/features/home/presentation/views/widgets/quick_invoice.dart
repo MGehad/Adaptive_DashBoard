@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utlis/styles.dart';
-import 'latest_transaction_list_view.dart';
+import 'latest_transaction_row.dart';
 import 'quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -28,12 +28,16 @@ class QuickInvoice extends StatelessWidget {
           const SizedBox(height: 12.0),
           const SizedBox(
             height: 74,
-            child: LatestTransactionListView(),
-          )
+            child: LatestTransactionRow(),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 12.0),
+            child: Divider(
+              color: Color(0xffF1F1F1),
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
-
