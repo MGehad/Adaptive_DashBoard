@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utlis/images.dart';
 import 'latest_transaction_item.dart';
 
 class LatestTransactionListView extends StatelessWidget {
@@ -13,19 +14,24 @@ class LatestTransactionListView extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       children: const [
-        LatestTransactionItem(),
+        LatestTransactionItem(
+            svgImage: Images.imagesAvatar1,
+            email: "Madraniadi20@gmail",
+            name: "Madrani Andi"),
         SizedBox(
           width: 12,
         ),
-        LatestTransactionItem(),
+        LatestTransactionItem(
+            svgImage: Images.imagesAvatar2,
+            email: "Josh Nunito@gmail.com",
+            name: "Josua Nunito"),
         SizedBox(
           width: 12,
         ),
-        LatestTransactionItem(),
-        SizedBox(
-          width: 12,
-        ),
-        LatestTransactionItem()
+        LatestTransactionItem(
+            svgImage: Images.imagesAvatar3,
+            email: "Madraniadi20@gmail",
+            name: "Madrani Andi"),
       ],
     );
   }

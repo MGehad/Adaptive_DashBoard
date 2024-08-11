@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../../core/utlis/images.dart';
 import '../../../../../core/utlis/styles.dart';
 
 class LatestTransactionItem extends StatelessWidget {
   const LatestTransactionItem({
     super.key,
+    required this.name,
+    required this.email,
+    required this.svgImage,
   });
+
+  final String name;
+  final String email;
+  final String svgImage;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +25,7 @@ class LatestTransactionItem extends StatelessWidget {
       child: Row(
         children: [
           SvgPicture.asset(
-            Images.imagesAvatar1,
+            svgImage,
             height: 48,
             width: 48,
           ),
@@ -31,11 +37,11 @@ class LatestTransactionItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Madrani Andi",
+                name,
                 style: Styles.textStyleSemiBold16,
               ),
               Text(
-                "Madraniadi20@gmail",
+                email,
                 style: Styles.textStyleRegular12,
               ),
             ],
