@@ -25,6 +25,7 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12.0),
           ),
           image: const DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(Images.imagesCardBackground),
           ),
         ),

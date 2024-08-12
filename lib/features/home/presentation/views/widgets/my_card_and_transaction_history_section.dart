@@ -1,6 +1,6 @@
-import 'package:adaptive_dashboard/constants.dart';
-import 'package:adaptive_dashboard/core/models/card_model.dart';
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
+import '../../../../../constants.dart';
 import '../../../../../core/utlis/styles.dart';
 import 'my_card.dart';
 
@@ -25,9 +25,16 @@ class MyCardAndTransactionHistorySection extends StatelessWidget {
             style: Styles.textStyleSemiBold20,
           ),
           const SizedBox(height: 20.0),
-          MyCard(
-            cardModel: cardModels[0],
-          )
+          ExpandablePageView(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            children: List.generate(
+              cardModels.length,
+              (index) => MyCard(
+                cardModel: cardModels[index],
+              ),
+            ),
+          ),
         ],
       ),
     );
