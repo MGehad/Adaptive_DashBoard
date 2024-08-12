@@ -1,13 +1,38 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../../constants.dart';
 import '../../../../../core/utlis/styles.dart';
+import 'dots_row.dart';
 import 'my_card.dart';
 
-class MyCardAndTransactionHistorySection extends StatelessWidget {
+class MyCardAndTransactionHistorySection extends StatefulWidget {
   const MyCardAndTransactionHistorySection({
     super.key,
   });
+
+  @override
+  State<MyCardAndTransactionHistorySection> createState() =>
+      _MyCardAndTransactionHistorySectionState();
+}
+
+class _MyCardAndTransactionHistorySectionState
+    extends State<MyCardAndTransactionHistorySection> {
+  late PageController pageController;
+  int currentPage = 0;
+
+  @override
+  void initState() {
+    pageController = PageController(initialPage: 0);
+    pageController.addListener(
+      () {
+        setState(() {
+          currentPage = pageController.page!.round();
+        });
+      },
+    );
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +51,7 @@ class MyCardAndTransactionHistorySection extends StatelessWidget {
           ),
           const SizedBox(height: 20.0),
           ExpandablePageView(
+            controller: pageController,
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
             children: List.generate(
@@ -35,6 +61,8 @@ class MyCardAndTransactionHistorySection extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 19.0),
+          DotsRow(selectedDot: currentPage),
         ],
       ),
     );
