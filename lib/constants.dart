@@ -1,4 +1,5 @@
 import 'core/models/all_expenses_item_model.dart';
+import 'core/models/card_model.dart';
 import 'core/models/drawer_item_model.dart';
 import 'core/models/user_info_model.dart';
 import 'core/utlis/images.dart';
@@ -43,4 +44,21 @@ List<UserInfoModel> userInfoModels = [
       svgImage: Images.imagesAvatar3,
       title: "Madrani Andi",
       subtitle: "Madraniadi20@gmail"),
+];
+List<CardModel> cardModels = [
+  CardModel(
+      name: "Syah Bandi",
+      cardDate: "12/25",
+      cardNumber: "0918 8124 0042 8129",
+      cardPassword: "124"),
+  CardModel(
+      name: "Mohamed Gehad",
+      cardDate: "04/27",
+      cardNumber: "0918 8177 0002 8772",
+      cardPassword: "374"),
+  CardModel(
+      name: "Ahmed Gehad",
+      cardDate: "06/28",
+      cardNumber: "0918 7254 0442 8079",
+      cardPassword: "907")
 ];

@@ -5,12 +5,15 @@ import '../../../../../core/utlis/styles.dart';
 class CardName extends StatelessWidget {
   const CardName({
     super.key,
+    required this.name,
   });
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-     crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           "Name card",
@@ -20,7 +23,7 @@ class CardName extends StatelessWidget {
           height: 12.0,
         ),
         Text(
-          "Syah Bandi",
+          name,
           style: Styles.textStyleSemiBold20.copyWith(color: Colors.white),
         ),
       ],

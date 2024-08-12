@@ -4,8 +4,11 @@ import '../../../../../core/utlis/styles.dart';
 
 class CardNumbers extends StatelessWidget {
   const CardNumbers({
-    super.key,
+    super.key, required this.cardNumber, required this.cardPassword, required this.cardDate,
   });
+  final String cardNumber;
+  final String cardPassword;
+  final String cardDate;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class CardNumbers extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Text(
-          "0918 8124 0042 8129",
+          cardNumber,
           style: Styles.textStyleSemiBold24.copyWith(color: Colors.white),
         ),
         const SizedBox(
@@ -23,11 +26,11 @@ class CardNumbers extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "12/20 - ",
+              "$cardDate - ",
               style: Styles.textStyleRegular16.copyWith(color: Colors.white),
             ),
             Text(
-              "124",
+              cardPassword,
               style: Styles.textStyleRegular16.copyWith(color: Colors.white),
             ),
           ],

@@ -1,3 +1,4 @@
+import 'package:adaptive_dashboard/core/models/card_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -8,7 +9,10 @@ import 'card_numbers.dart';
 class MyCard extends StatelessWidget {
   const MyCard({
     super.key,
+    required this.cardModel,
   });
+
+  final CardModel cardModel;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +37,17 @@ class MyCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const CardName(),
+                  CardName(name: cardModel.name),
                   SvgPicture.asset(Images.imagesGallery)
                 ],
               ),
-              const Align(
+              Align(
                 alignment: Alignment.bottomRight,
-                child: CardNumbers(),
+                child: CardNumbers(
+                  cardNumber: cardModel.cardNumber,
+                  cardPassword: cardModel.cardPassword,
+                  cardDate: cardModel.cardDate,
+                ),
               ),
             ],
           ),
