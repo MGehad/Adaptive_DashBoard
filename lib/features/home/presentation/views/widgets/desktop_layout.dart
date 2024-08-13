@@ -22,7 +22,7 @@ class DesktopLayout extends StatelessWidget {
               child: Column(
                 children: [
                   MyCardAndTransactionHistorySection(),
-                  SizedBox(height: 24.0)
+                  SizedBox(height: 24.0),
                 ],
               ),
             ),

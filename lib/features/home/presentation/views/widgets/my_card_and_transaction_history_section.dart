@@ -1,10 +1,8 @@
-import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../constants.dart';
 import '../../../../../core/utlis/styles.dart';
 import 'dots_row.dart';
-import 'my_card.dart';
+import 'my_cards_list.dart';
 import 'transaction_history.dart';
 
 class MyCardAndTransactionHistorySection extends StatefulWidget {
@@ -39,7 +37,11 @@ class _MyCardAndTransactionHistorySectionState
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(
-          left: 24.0, bottom: 12.0, right: 24.0, top: 24.0),
+        left: 24.0,
+        bottom: 12.0,
+        right: 24.0,
+        top: 24.0,
+      ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
@@ -53,17 +55,7 @@ class _MyCardAndTransactionHistorySectionState
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20.0),
-          ExpandablePageView(
-            controller: pageController,
-            scrollDirection: Axis.horizontal,
-            physics: const BouncingScrollPhysics(),
-            children: List.generate(
-              cardModels.length,
-              (index) => MyCard(
-                cardModel: cardModels[index],
-              ),
-            ),
-          ),
+          MyCardsList(pageController: pageController),
           const SizedBox(height: 18.0),
           DotsRow(selectedDot: currentPage),
           const Padding(
@@ -76,3 +68,5 @@ class _MyCardAndTransactionHistorySectionState
     );
   }
 }
+
+
