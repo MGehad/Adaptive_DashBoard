@@ -19,8 +19,11 @@ class AllExpensesHeader extends StatelessWidget {
         ),
         Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12.0),
-              border: Border.all(color: const Color(0xffF1F1F1),),),
+            borderRadius: BorderRadius.circular(12.0),
+            border: Border.all(
+              color: const Color(0xffF1F1F1),
+            ),
+          ),
           padding: const EdgeInsets.all(12.0),
           child: Row(
             children: [

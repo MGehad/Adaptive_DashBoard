@@ -4,8 +4,12 @@ import '../../../../../core/utlis/styles.dart';
 
 class CardNumbers extends StatelessWidget {
   const CardNumbers({
-    super.key, required this.cardNumber, required this.cardPassword, required this.cardDate,
+    super.key,
+    required this.cardNumber,
+    required this.cardPassword,
+    required this.cardDate,
   });
+
   final String cardNumber;
   final String cardPassword;
   final String cardDate;

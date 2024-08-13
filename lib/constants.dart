@@ -1,3 +1,5 @@
+import 'package:adaptive_dashboard/core/models/transaction_history_model.dart';
+
 import 'core/models/all_expenses_item_model.dart';
 import 'core/models/card_model.dart';
 import 'core/models/drawer_item_model.dart';
@@ -61,4 +63,21 @@ List<CardModel> cardModels = [
       cardDate: "06/28",
       cardNumber: "0918 7254 0442 8079",
       cardPassword: "907")
+];
+List<TransactionHistoryModel> transactionHistoryModels = [
+  TransactionHistoryModel(
+      title: "Cash Withdrawal",
+      date: "13 Apr, 2022",
+      amount: "\$20,129",
+      transaction: Transaction.Withdraw),
+  TransactionHistoryModel(
+      title: "Landing Page project",
+      date: "13 Apr, 2022 at 3:30 PM",
+      amount: "\$2,000",
+      transaction: Transaction.Deposit),
+  TransactionHistoryModel(
+      title: "Juni Mobile App project",
+      date: "13 Apr, 2022 at 3:30 PM",
+      amount: "\$20,129",
+      transaction: Transaction.Deposit),
 ];

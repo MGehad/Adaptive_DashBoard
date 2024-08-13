@@ -34,7 +34,7 @@ abstract class Styles {
   static TextStyle textStyleSemiBold20 = const TextStyle(
     color: Color(0xff064061),
     fontSize: 20,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.bold,
     fontFamily: 'Montserrat',
   );
   static TextStyle textStyleSemiBold24 = const TextStyle(

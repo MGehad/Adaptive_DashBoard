@@ -21,7 +21,6 @@ class _DrawerItemListState extends State<DrawerItemList> {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemCount: widget.items.length,
-
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),

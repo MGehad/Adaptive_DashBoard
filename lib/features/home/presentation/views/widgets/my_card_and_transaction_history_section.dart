@@ -5,6 +5,7 @@ import '../../../../../constants.dart';
 import '../../../../../core/utlis/styles.dart';
 import 'dots_row.dart';
 import 'my_card.dart';
+import 'transaction_history.dart';
 
 class MyCardAndTransactionHistorySection extends StatefulWidget {
   const MyCardAndTransactionHistorySection({
@@ -37,7 +38,8 @@ class _MyCardAndTransactionHistorySectionState
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.only(
+          left: 24.0, bottom: 12.0, right: 24.0, top: 24.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
@@ -47,7 +49,8 @@ class _MyCardAndTransactionHistorySectionState
         children: [
           Text(
             "My card",
-            style: Styles.textStyleSemiBold20,
+            style: Styles.textStyleSemiBold20
+                .copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20.0),
           ExpandablePageView(
@@ -61,8 +64,13 @@ class _MyCardAndTransactionHistorySectionState
               ),
             ),
           ),
-          const SizedBox(height: 19.0),
+          const SizedBox(height: 18.0),
           DotsRow(selectedDot: currentPage),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            child: Divider(color: Color(0xffF1F1F1)),
+          ),
+          const TransactionHistory(),
         ],
       ),
     );
