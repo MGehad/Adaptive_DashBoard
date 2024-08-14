@@ -11,16 +11,14 @@ class MyCardAndTransactionHistorySectionAndIncome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(top: 30.0, right: 30.0),
-        child: Column(
-          children: [
-            MyCardAndTransactionHistorySection(),
-            SizedBox(height: 24.0),
-            Income(),
-            SizedBox(height: 30.0),
-          ],
-        ),
+      child: Column(
+        children: [
+          SizedBox(height: 30.0),
+          MyCardAndTransactionHistorySection(),
+          SizedBox(height: 24.0),
+          Income(),
+          SizedBox(height: 30.0),
+        ],
       ),
     );
   }
