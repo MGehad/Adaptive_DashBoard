@@ -18,6 +18,7 @@ class MyCardAndTransactionHistorySectionAndIncome extends StatelessWidget {
             MyCardAndTransactionHistorySection(),
             SizedBox(height: 24.0),
             Income(),
+            SizedBox(height: 30.0),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:adaptive_dashboard/core/utlis/styles.dart';
 import 'package:flutter/material.dart';
 import 'chart_items.dart';
 import 'income_chart.dart';
@@ -16,12 +17,12 @@ class Income extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
       ),
-      child: const Column(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          IncomeHeader(),
-          SizedBox(height: 16.0),
-          SizedBox(
+          const IncomeHeader(),
+          const SizedBox(height: 16.0),
+          const SizedBox(
             height: 120.0,
             child: Row(
               children: [
@@ -29,6 +30,16 @@ class Income extends StatelessWidget {
                 SizedBox(width: 40.0),
                 Expanded(flex: 9, child: ChartItems())
               ],
+            ),
+          ),
+          const Padding(
+              padding: EdgeInsets.symmetric(vertical: 24.0),
+              child: Divider(color: Color(0xffF1F1F1))),
+          Center(
+            child: Text(
+              "See detail",
+              style: Styles.textStyleSemiBold16
+                  .copyWith(color: const Color(0xff4EB7F2)),
             ),
           )
         ],
