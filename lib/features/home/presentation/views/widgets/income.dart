@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'chart_items.dart';
+import 'income_chart.dart';
 import 'income_header.dart';
 
 class Income extends StatelessWidget {
@@ -15,9 +16,21 @@ class Income extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
       ),
-      child: Column(
+      child: const Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           IncomeHeader(),
+          SizedBox(height: 16.0),
+          SizedBox(
+            height: 120.0,
+            child: Row(
+              children: [
+                Expanded(flex: 4, child: IncomeChart()),
+                SizedBox(width: 40.0),
+                Expanded(flex: 9, child: ChartItems())
+              ],
+            ),
+          )
         ],
       ),
     );

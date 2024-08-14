@@ -1,7 +1,10 @@
+import 'dart:ui';
+
 import 'package:adaptive_dashboard/core/models/transaction_history_model.dart';
 
 import 'core/models/all_expenses_item_model.dart';
 import 'core/models/card_model.dart';
+import 'core/models/chart_item_model.dart';
 import 'core/models/drawer_item_model.dart';
 import 'core/models/user_info_model.dart';
 import 'core/utlis/images.dart';
@@ -80,4 +83,20 @@ List<TransactionHistoryModel> transactionHistoryModels = [
       date: "13 Apr, 2022 at 3:30 PM",
       amount: "\$20,129",
       transaction: Transaction.Deposit),
+];
+List<ChartItemModel> chartItemModels = [
+  ChartItemModel(
+      title: "Other", color: const Color(0xffE2DECD), percentage: 22.0),
+  ChartItemModel(
+      title: "Product royalti",
+      color: const Color(0xff064061),
+      percentage: 20.0),
+  ChartItemModel(
+      title: "Design product",
+      color: const Color(0xff4EB7F2),
+      percentage: 25.0),
+  ChartItemModel(
+      title: "Design service",
+      color: const Color(0xff208CC8),
+      percentage: 40.0),
 ];

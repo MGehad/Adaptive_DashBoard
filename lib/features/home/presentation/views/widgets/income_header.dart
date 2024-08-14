@@ -1,6 +1,7 @@
 import 'package:adaptive_dashboard/core/utlis/styles.dart';
-import 'package:adaptive_dashboard/features/home/presentation/views/widgets/container_list.dart';
 import 'package:flutter/material.dart';
+
+import 'container_list.dart';
 
 class IncomeHeader extends StatelessWidget {
   const IncomeHeader({super.key});
