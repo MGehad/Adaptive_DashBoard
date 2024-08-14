@@ -1,3 +1,4 @@
+import 'package:adaptive_dashboard/features/home/presentation/views/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'widgets/adabtive_layout_widget.dart';
 import 'widgets/desktop_layout.dart';
@@ -10,6 +11,13 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MediaQuery.sizeOf(context).width < 800
+          ? AppBar(
+              elevation: 0,
+              backgroundColor: Colors.grey.withOpacity(0.08),
+            )
+          : null,
+      drawer: CustomDrawer(),
       backgroundColor: const Color(0xffE5E5E5),
       body: AdaptiveLayoutWidget(
         mobileLayout: (context) => const MobileLayout(),
