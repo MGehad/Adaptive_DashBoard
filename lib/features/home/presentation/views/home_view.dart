@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
               backgroundColor: Colors.grey.withOpacity(0.08),
             )
           : null,
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: const Color(0xffE5E5E5),
       body: AdaptiveLayoutWidget(
         mobileLayout: (context) => const MobileLayout(),

@@ -32,15 +32,15 @@ class TransactionHistory extends StatelessWidget {
           style:
               Styles.textStyleMedium16.copyWith(color: const Color(0xffAAAAAA)),
         ),
-        ListView.builder(
-          shrinkWrap: true,
-          itemCount: transactionHistoryModels.length,
-          itemBuilder: (context, index) {
-            return TransactionHistoryItem(
-              transactionHistoryModel: transactionHistoryModels[index],
-            );
-          },
-        ),
+        Column(
+          children: transactionHistoryModels.map(
+            (e) {
+              return TransactionHistoryItem(
+                transactionHistoryModel: e,
+              );
+            },
+          ).toList(),
+        )
       ],
     );
   }

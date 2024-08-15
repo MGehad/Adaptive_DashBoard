@@ -12,20 +12,33 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(flex: 6, child: CustomDrawer()),
+        Expanded(flex: 1, child: CustomDrawer()),
         Expanded(
-          flex: 15,
-          child: Padding(
-            padding: EdgeInsets.all(30.0),
-            child: SingleChildScrollView(
-                child: AllExpensesAndQuickInvoiceSection()),
-          ),
-        ),
-        Expanded(
-          flex: 11,
-          child: Padding(
-            padding: EdgeInsets.only(right: 30.0),
-            child: MyCardAndTransactionHistorySectionAndIncome(),
+          flex: 4,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 15,
+                      child: Padding(
+                        padding: EdgeInsets.all(30.0),
+                        child: AllExpensesAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 11,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 30.0),
+                        child: MyCardAndTransactionHistorySectionAndIncome(),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
           ),
         ),
       ],
