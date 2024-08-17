@@ -35,7 +35,7 @@ class _IncomeChartState extends State<IncomeChart> {
               title: e.value.title,
               color: e.value.color,
               showTitle: false,
-              radius: (touchedItem == e.key) ? 30 : 20,
+              radius: (touchedItem == e.key) ? 35 : 25,
               value: e.value.percentage);
         },
       ).toList(),

@@ -27,14 +27,19 @@ class AllExpensesUnActiveItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CircleAvatar(
-                backgroundColor: Colors.grey.withOpacity(.1),
-                maxRadius: 28,
-                child: SvgPicture.asset(
-                  model.svgImage,
-                  color: const Color(0xff4EB7F2),
-                  width: 32,
-                  height: 32,
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 56),
+                  child: CircleAvatar(
+                    backgroundColor: Colors.grey.withOpacity(.1),
+                    maxRadius: 28,
+                    child: SvgPicture.asset(
+                      model.svgImage,
+                      color: const Color(0xff4EB7F2),
+                      width: 32,
+                      height: 32,
+                    ),
+                  ),
                 ),
               ),
               const Icon(
@@ -47,15 +52,27 @@ class AllExpensesUnActiveItem extends StatelessWidget {
           const SizedBox(
             height: 8.0,
           ),
-          Text(
-            model.title,
-            style: Styles.textStyleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              model.title,
+              style: Styles.textStyleSemiBold16(context),
+            ),
           ),
-          Text(model.date, style: Styles.textStyleRegular14(context)),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child:
+                  Text(model.date, style: Styles.textStyleRegular14(context))),
           const SizedBox(
             height: 14,
           ),
-          Text(model.price, style: Styles.textStyleSemiBold24(context))
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child:
+                  Text(model.price, style: Styles.textStyleSemiBold24(context)))
         ],
       ),
     );

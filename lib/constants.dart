@@ -40,7 +40,7 @@ List<UserInfoModel> userInfoModels = [
   UserInfoModel(
       svgImage: Images.imagesAvatar1,
       title: "Madrani Andi",
-      subtitle: "Madraniadi20@gmail"),
+      subtitle: "Madraniadi20@gmail.com"),
   UserInfoModel(
       svgImage: Images.imagesAvatar2,
       title: "Josua Nunito",
@@ -48,7 +48,7 @@ List<UserInfoModel> userInfoModels = [
   UserInfoModel(
       svgImage: Images.imagesAvatar3,
       title: "Madrani Andi",
-      subtitle: "Madraniadi20@gmail"),
+      subtitle: "Madraniadi20@gmail.com"),
 ];
 List<CardModel> cardModels = [
   CardModel(

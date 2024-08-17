@@ -17,9 +17,13 @@ class DrawerActiveItem extends StatelessWidget {
         width: 24,
         fit: BoxFit.fill,
       ),
-      title: Text(
-        model.title,
-        style: Styles.textStyleBold16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          model.title,
+          style: Styles.textStyleBold16(context),
+        ),
       ),
       trailing: Container(
         color: const Color(0xff4EB7F2),

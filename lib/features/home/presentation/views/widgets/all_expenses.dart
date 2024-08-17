@@ -1,3 +1,4 @@
+import 'package:adaptive_dashboard/core/models/all_expenses_item_model.dart';
 import 'package:flutter/material.dart';
 import '../../../../../constants.dart';
 import 'all_expenses_header.dart';
@@ -21,51 +22,41 @@ class _AllExpensesState extends State<AllExpenses> {
         borderRadius: BorderRadius.circular(12),
         color: Colors.white,
       ),
-      child: Column(
-        children: [
-          const AllExpensesHeader(),
-          const SizedBox(height: 16),
-          Row(
-              children: allExpensesItemModels.asMap().entries.map(
-            (e) {
-              if (e.key == 1) {
-                return Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      updateIndex(e.key);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                      child: AllExpensesItem(
-                        model: e.value,
-                        isActive: selectedItem == e.key,
-                      ),
-                    ),
-                  ),
-                );
-              } else {
-                return Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      updateIndex(e.key);
-                    },
-                    child: AllExpensesItem(
-                      model: e.value,
-                      isActive: selectedItem == e.key,
-                    ),
-                  ),
-                );
-              }
-            },
-          ).toList()),
-        ],
+      child: Column(children: [
+        const AllExpensesHeader(),
+        const SizedBox(height: 16),
+        Row(
+          children: [
+            buildExpandedItem(allExpensesItemModels[0], 0),
+            const SizedBox(width: 8.0),
+            buildExpandedItem(allExpensesItemModels[1], 1),
+            const SizedBox(width: 8.0),
+            buildExpandedItem(allExpensesItemModels[2], 2),
+          ],
+        ),
+      ]),
+    );
+  }
+
+  Expanded buildExpandedItem(AllExpensesItemModel model, int index) {
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          updateIndex(index);
+        },
+        child: AllExpensesItem(
+          model: model,
+          isActive: selectedItem == index,
+        ),
       ),
     );
   }
 
-  void updateIndex(int i) {
+  void updateIndex(int index) {
     setState(() {
-      if (selectedItem != i) selectedItem = i;
+      if (selectedItem != index) {
+        selectedItem = index;
+      }
     });
   }
 }

@@ -1,8 +1,12 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'features/home/presentation/views/home_view.dart';
 
 void main() {
-  runApp(const AdaptiveDashBoardApp());
+  runApp(DevicePreview(
+    enabled: true,
+    builder: (context) => const AdaptiveDashBoardApp(),
+  ));
 }
 
 class AdaptiveDashBoardApp extends StatelessWidget {
@@ -11,6 +15,8 @@ class AdaptiveDashBoardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,

@@ -20,6 +20,7 @@ class DesktopLayout extends StatelessWidget {
               SliverFillRemaining(
                 hasScrollBody: false,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                       flex: 15,

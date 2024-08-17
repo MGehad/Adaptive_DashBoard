@@ -28,43 +28,62 @@ class AllExpensesActiveItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CircleAvatar(
-                backgroundColor: const Color(0xffFAFAFA).withOpacity(.2),
-                maxRadius: 28,
-                child: SvgPicture.asset(
-                  model.svgImage,
-                  color: Colors.white,
-                  width: 32,
-                  height: 32,
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 56),
+                  child: CircleAvatar(
+                    backgroundColor: const Color(0xffFAFAFA).withOpacity(.2),
+                    maxRadius: 28,
+                    child: SvgPicture.asset(
+                      model.svgImage,
+                      color: Colors.white,
+                      width: 32,
+                      height: 32,
+                    ),
+                  ),
                 ),
               ),
-              const Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.white,
-                size: 24,
+              const Flexible(
+                child: Icon(
+                  Icons.arrow_forward_ios_outlined,
+                  color: Colors.white,
+                  size: 24,
+                ),
               )
             ],
           ),
           const SizedBox(
             height: 8.0,
           ),
-          Text(
-            model.title,
-            style: Styles.textStyleSemiBold16(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              model.title,
+              style: Styles.textStyleSemiBold16(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
-          Text(
-            model.date,
-            style: Styles.textStyleRegular14(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              model.date,
+              style: Styles.textStyleRegular14(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(
             height: 14,
           ),
-          Text(
-            model.price,
-            style: Styles.textStyleSemiBold24(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              model.price,
+              style: Styles.textStyleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           )
         ],
       ),

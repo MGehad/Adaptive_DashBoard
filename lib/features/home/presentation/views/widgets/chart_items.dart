@@ -11,16 +11,16 @@ class ChartItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: chartItemModels.length,
-      itemBuilder: (context, index) {
-        if (index != 3) {
-          return Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: buildChartItem(chartItemModels[index], context));
-        }
-        return buildChartItem(chartItemModels[index], context);
-      },
+    return Column(
+      children: [
+        buildChartItem(chartItemModels[3], context),
+        const Spacer(),
+        buildChartItem(chartItemModels[2], context),
+        const Spacer(),
+        buildChartItem(chartItemModels[1], context),
+        const Spacer(),
+        buildChartItem(chartItemModels[0], context),
+      ],
     );
   }
 
