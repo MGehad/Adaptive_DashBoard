@@ -30,7 +30,7 @@ class AllExpensesActiveItem extends StatelessWidget {
             children: [
               CircleAvatar(
                 backgroundColor: const Color(0xffFAFAFA).withOpacity(.2),
-                maxRadius: 30,
+                maxRadius: 28,
                 child: SvgPicture.asset(
                   model.svgImage,
                   color: Colors.white,
