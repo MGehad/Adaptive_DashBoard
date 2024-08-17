@@ -6,8 +6,10 @@ import '../../../../../core/utlis/styles.dart';
 
 class ContainerList extends StatelessWidget {
   const ContainerList({
-    super.key, required this.title,
+    super.key,
+    required this.title,
   });
+
   final String title;
 
   @override
@@ -24,7 +26,7 @@ class ContainerList extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Styles.textStyleSemiBold16,
+            style: Styles.textStyleSemiBold16(context),
           ),
           const SizedBox(
             width: 18.0,

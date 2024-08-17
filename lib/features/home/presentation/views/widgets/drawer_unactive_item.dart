@@ -19,7 +19,7 @@ class DrawerUnActiveItem extends StatelessWidget {
       ),
       title: Text(
         model.title,
-        style: Styles.textStyleRegular16,
+        style: Styles.textStyleRegular16(context),
       ),
     );
   }

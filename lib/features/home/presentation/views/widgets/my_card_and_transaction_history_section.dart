@@ -51,7 +51,7 @@ class _MyCardAndTransactionHistorySectionState
         children: [
           Text(
             "My card",
-            style: Styles.textStyleSemiBold20
+            style: Styles.textStyleSemiBold20(context)
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20.0),
@@ -68,5 +68,3 @@ class _MyCardAndTransactionHistorySectionState
     );
   }
 }
-
-

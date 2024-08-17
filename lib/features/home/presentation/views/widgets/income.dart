@@ -38,7 +38,7 @@ class Income extends StatelessWidget {
           Center(
             child: Text(
               "See detail",
-              style: Styles.textStyleSemiBold16
+              style: Styles.textStyleSemiBold16(context)
                   .copyWith(color: const Color(0xff4EB7F2)),
             ),
           )

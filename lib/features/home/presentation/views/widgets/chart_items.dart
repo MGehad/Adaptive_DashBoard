@@ -17,14 +17,14 @@ class ChartItems extends StatelessWidget {
         if (index != 3) {
           return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
-              child: buildChartItem(chartItemModels[index]));
+              child: buildChartItem(chartItemModels[index], context));
         }
-        return buildChartItem(chartItemModels[index]);
+        return buildChartItem(chartItemModels[index], context);
       },
     );
   }
 
-  Row buildChartItem(ChartItemModel model) {
+  Row buildChartItem(ChartItemModel model, BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -39,14 +39,14 @@ class ChartItems extends StatelessWidget {
             const SizedBox(width: 12),
             Text(
               model.title,
-              style: Styles.textStyleRegular16,
+              style: Styles.textStyleRegular16(context),
             ),
           ],
         ),
         Text(
           "${model.percentage}%",
-          style:
-              Styles.textStyleMedium16.copyWith(color: const Color(0xff208CC8)),
+          style: Styles.textStyleMedium16(context)
+              .copyWith(color: const Color(0xff208CC8)),
         )
       ],
     );

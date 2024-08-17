@@ -43,7 +43,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   "Add more details",
-                  style: Styles.textStyleSemiBold18,
+                  style: Styles.textStyleSemiBold18(context),
                 ),
               ),
             ),
@@ -59,8 +59,8 @@ class QuickInvoiceForm extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   "Send Money",
-                  style:
-                      Styles.textStyleSemiBold18.copyWith(color: Colors.white),
+                  style: Styles.textStyleSemiBold18(context)
+                      .copyWith(color: Colors.white),
                 ),
               ),
             )

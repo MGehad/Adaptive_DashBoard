@@ -17,14 +17,16 @@ class CardName extends StatelessWidget {
       children: [
         Text(
           "Name card",
-          style: Styles.textStyleRegular16.copyWith(color: Colors.white),
+          style:
+              Styles.textStyleRegular16(context).copyWith(color: Colors.white),
         ),
         const SizedBox(
           height: 12.0,
         ),
         Text(
           name,
-          style: Styles.textStyleSemiBold20.copyWith(color: Colors.white),
+          style:
+              Styles.textStyleSemiBold20(context).copyWith(color: Colors.white),
         ),
       ],
     );

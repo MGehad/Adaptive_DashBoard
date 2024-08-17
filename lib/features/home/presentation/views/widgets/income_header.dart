@@ -13,7 +13,7 @@ class IncomeHeader extends StatelessWidget {
       children: [
         Text(
           "Income",
-          style: Styles.textStyleSemiBold20,
+          style: Styles.textStyleSemiBold20(context),
         ),
         const ContainerList(title: "Monthly")
       ],

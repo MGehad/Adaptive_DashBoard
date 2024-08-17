@@ -19,7 +19,7 @@ class DrawerActiveItem extends StatelessWidget {
       ),
       title: Text(
         model.title,
-        style: Styles.textStyleBold16,
+        style: Styles.textStyleBold16(context),
       ),
       trailing: Container(
         color: const Color(0xff4EB7F2),

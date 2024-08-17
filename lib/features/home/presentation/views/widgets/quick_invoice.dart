@@ -24,7 +24,7 @@ class QuickInvoice extends StatelessWidget {
           const SizedBox(height: 24.0),
           Text(
             "Latest Transaction",
-            style: Styles.textStyleMedium16,
+            style: Styles.textStyleMedium16(context),
           ),
           const SizedBox(height: 12.0),
           const LatestTransactionRow(),

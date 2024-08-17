@@ -26,17 +26,17 @@ class TransactionHistoryItem extends StatelessWidget {
         contentPadding: EdgeInsets.zero,
         title: Text(
           transactionHistoryModel.title,
-          style:
-              Styles.textStyleSemiBold16.copyWith(fontWeight: FontWeight.bold),
+          style: Styles.textStyleSemiBold16(context)
+              .copyWith(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
           transactionHistoryModel.date,
-          style: Styles.textStyleRegular16
+          style: Styles.textStyleRegular16(context)
               .copyWith(color: const Color(0xffAAAAAA)),
         ),
         trailing: Text(
           transactionHistoryModel.amount,
-          style: Styles.textStyleSemiBold20.copyWith(
+          style: Styles.textStyleSemiBold20(context).copyWith(
               color:
                   (transactionHistoryModel.transaction == Transaction.Withdraw)
                       ? const Color(0xffF3735E)

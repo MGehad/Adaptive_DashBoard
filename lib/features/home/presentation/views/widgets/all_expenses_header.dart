@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import '../../../../../core/utlis/images.dart';
 import '../../../../../core/utlis/styles.dart';
 import 'container_list.dart';
 
@@ -16,7 +14,7 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
         Text(
           "All Expenses",
-          style: Styles.textStyleSemiBold20,
+          style: Styles.textStyleSemiBold20(context),
         ),
         const ContainerList(title: "Monthly",)
       ],

@@ -21,7 +21,8 @@ class CardNumbers extends StatelessWidget {
       children: [
         Text(
           cardNumber,
-          style: Styles.textStyleSemiBold24.copyWith(color: Colors.white),
+          style:
+              Styles.textStyleSemiBold24(context).copyWith(color: Colors.white),
         ),
         const SizedBox(
           height: 12.0,
@@ -31,11 +32,13 @@ class CardNumbers extends StatelessWidget {
           children: [
             Text(
               "$cardDate - ",
-              style: Styles.textStyleRegular16.copyWith(color: Colors.white),
+              style: Styles.textStyleRegular16(context)
+                  .copyWith(color: Colors.white),
             ),
             Text(
               cardPassword,
-              style: Styles.textStyleRegular16.copyWith(color: Colors.white),
+              style: Styles.textStyleRegular16(context)
+                  .copyWith(color: Colors.white),
             ),
           ],
         ),

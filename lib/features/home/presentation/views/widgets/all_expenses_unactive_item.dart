@@ -49,13 +49,13 @@ class AllExpensesUnActiveItem extends StatelessWidget {
           ),
           Text(
             model.title,
-            style: Styles.textStyleSemiBold16,
+            style: Styles.textStyleSemiBold16(context),
           ),
-          Text(model.date, style: Styles.textStyleRegular14),
+          Text(model.date, style: Styles.textStyleRegular14(context)),
           const SizedBox(
             height: 14,
           ),
-          Text(model.price, style: Styles.textStyleSemiBold24)
+          Text(model.price, style: Styles.textStyleSemiBold24(context))
         ],
       ),
     );

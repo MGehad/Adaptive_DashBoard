@@ -15,7 +15,7 @@ class TextWithTextField extends StatelessWidget {
       children: [
         Text(
           txt,
-          style: Styles.textStyleMedium16,
+          style: Styles.textStyleMedium16(context),
         ),
         const SizedBox(
           height: 12,
@@ -25,7 +25,7 @@ class TextWithTextField extends StatelessWidget {
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.all(20.0),
             hintText: textField,
-            hintStyle: Styles.textStyleRegular16
+            hintStyle: Styles.textStyleRegular16(context)
                 .copyWith(color: const Color(0xffAAAAAA)),
             fillColor: Colors.grey.withOpacity(.08),
             filled: true,

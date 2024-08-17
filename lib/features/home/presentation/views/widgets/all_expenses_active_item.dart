@@ -50,18 +50,21 @@ class AllExpensesActiveItem extends StatelessWidget {
           ),
           Text(
             model.title,
-            style: Styles.textStyleSemiBold16.copyWith(color: Colors.white),
+            style: Styles.textStyleSemiBold16(context)
+                .copyWith(color: Colors.white),
           ),
           Text(
             model.date,
-            style: Styles.textStyleRegular14.copyWith(color: Colors.white),
+            style: Styles.textStyleRegular14(context)
+                .copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 14,
           ),
           Text(
             model.price,
-            style: Styles.textStyleSemiBold24.copyWith(color: Colors.white),
+            style: Styles.textStyleSemiBold24(context)
+                .copyWith(color: Colors.white),
           )
         ],
       ),
