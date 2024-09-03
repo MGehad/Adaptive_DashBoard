@@ -17,9 +17,9 @@ Adaptive Dashboard is a single-screen application built with the Flutter framewo
 
 ## 📸 Screenshots
 
-| Smartphone | Tablet | Laptop |
-| ---------- | ------ | ------ |
-| ![Smartphone](path_to_smartphone_image) | ![Tablet](path_to_tablet_image) | ![Laptop](path_to_laptop_image) |
+| Smartphone | Smartphone | Tablet | Laptop |
+| ---------- | ---------- | ------ | ------ |
+| ![Smartphone1](https://github.com/MGehad/Adaptive_DashBoard/blob/main/images/phone1.png) | ![Smartphone1](https://github.com/MGehad/Adaptive_DashBoard/blob/main/images/phone2.png) | ![Tablet](https://github.com/MGehad/Adaptive_DashBoard/blob/main/images/tablet.png) | ![Laptop](https://github.com/MGehad/Adaptive_DashBoard/blob/main/images/laptop.png) |
 
 ## 📚 How to Use
 
